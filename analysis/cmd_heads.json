@@ -1,0 +1,968 @@
+{
+ "V2:CMD_SET_REBOOT": [
+  9,
+  0,
+  0,
+  0
+ ],
+ "V2:CMD_GET_BATTERY_LEVEL": [
+  9,
+  0,
+  0,
+  1
+ ],
+ "V2:CMD_SET_AUTO_SHUTDOWN_TIME": [
+  9,
+  0,
+  0,
+  2
+ ],
+ "V2:CMD_GET_AUTO_SHUTDOWN_TIME": [
+  9,
+  0,
+  0,
+  3
+ ],
+ "V2:CMD_GET_CHARGE_STA": [
+  9,
+  0,
+  0,
+  5
+ ],
+ "V2:CMD_SET_AUTO_POWER_ON": [
+  9,
+  0,
+  0,
+  6
+ ],
+ "V2:CMD_GET_AUTO_POWER_ON": [
+  9,
+  0,
+  0,
+  7
+ ],
+ "V2:CMD_SET_POWER_MANAGE_MODE": [
+  9,
+  0,
+  0,
+  8
+ ],
+ "V2:CMD_GET_POWER_MANAGE_MODE": [
+  9,
+  0,
+  0,
+  9
+ ],
+ "V2:CMD_GET_SN": [
+  9,
+  1,
+  0,
+  3
+ ],
+ "V2:CMD_GET_VER": [
+  9,
+  1,
+  0,
+  4
+ ],
+ "V2:CMD_SET_FACTORY_RESET": [
+  9,
+  1,
+  0,
+  5
+ ],
+ "V2:CMD_GET_FUNC_STA": [
+  9,
+  1,
+  0,
+  8
+ ],
+ "V2:CMD_SET_DEVICE_VER": [
+  9,
+  1,
+  0,
+  13
+ ],
+ "V2:CMD_GET_DEVICE_VER": [
+  9,
+  1,
+  0,
+  14
+ ],
+ "V2:CMD_SET_DEVICE_ALIAS": [
+  9,
+  1,
+  0,
+  15
+ ],
+ "V2:CMD_GET_DEVICE_ALIAS": [
+  9,
+  1,
+  0,
+  16
+ ],
+ "V2:CMD_SET_DEVICE_MODE": [
+  9,
+  1,
+  1,
+  0
+ ],
+ "V2:CMD_GET_DEVICE_MODE": [
+  9,
+  1,
+  1,
+  1
+ ],
+ "V2:CMD_SET_PRIVACY_TRIGGER_TIME": [
+  9,
+  2,
+  1,
+  0
+ ],
+ "V2:CMD_GET_PRIVACY_TRIGGER_TIME": [
+  9,
+  2,
+  1,
+  1
+ ],
+ "V2:CMD_SET_LIGHT_RGB_SWITCH": [
+  9,
+  2,
+  2,
+  0
+ ],
+ "V2:CMD_GET_LIGHT_RGB_SWITCH": [
+  9,
+  2,
+  2,
+  1
+ ],
+ "V2:CMD_SET_LIGHT_RGB_COLOR": [
+  9,
+  2,
+  2,
+  2
+ ],
+ "V2:CMD_GET_LIGHT_RGB_COLOR": [
+  9,
+  2,
+  2,
+  3
+ ],
+ "V2:CMD_SET_LIGHT_RGB_BRIGHTNESS": [
+  9,
+  2,
+  2,
+  4
+ ],
+ "V2:CMD_GET_LIGHT_RGB_BRIGHTNESS": [
+  9,
+  2,
+  2,
+  5
+ ],
+ "V2:CMD_SET_LIGHT_MODE": [
+  9,
+  2,
+  2,
+  6
+ ],
+ "V2:CMD_GET_LIGHT_MODE": [
+  9,
+  2,
+  2,
+  7
+ ],
+ "V2:CMD_GET_LIGHT_ADJUST_ALLOW_STA": [
+  9,
+  2,
+  2,
+  8
+ ],
+ "V2:CMD_SET_LIGHT_LIMIT_BRIGHTNESS": [
+  9,
+  2,
+  2,
+  11
+ ],
+ "V2:CMD_GET_LIGHT_LIMIT_BRIGHTNESS": [
+  9,
+  2,
+  2,
+  12
+ ],
+ "V2:CMD_SET_LIGHT_PALETTE_COLOR": [
+  9,
+  2,
+  2,
+  13
+ ],
+ "V2:CMD_GET_LIGHT_PALETTE_COLOR": [
+  9,
+  2,
+  2,
+  14
+ ],
+ "V2:CMD_SET_LIGHT_COLOR_TYPE": [
+  9,
+  2,
+  2,
+  15
+ ],
+ "V2:CMD_GET_LIGHT_COLOR_TYPE": [
+  9,
+  2,
+  2,
+  16
+ ],
+ "V2:CMD_GET_LIGHT_FAVORITE_COLOR": [
+  9,
+  2,
+  2,
+  17
+ ],
+ "V2:CMD_SET_LIGHT_FAVORITE_COLOR_SAVE": [
+  9,
+  2,
+  2,
+  18
+ ],
+ "V2:CMD_SET_LIGHT_FAVORITE_COLOR_DEL": [
+  9,
+  2,
+  2,
+  19
+ ],
+ "V2:CMD_SET_KEY_SHORT_FUNC": [
+  9,
+  2,
+  4,
+  0
+ ],
+ "V2:CMD_GET_KEY_SHORT_FUNC": [
+  9,
+  2,
+  4,
+  1
+ ],
+ "V2:CMD_SET_MOTOR_POS": [
+  9,
+  3,
+  1,
+  0
+ ],
+ "V2:CMD_GET_MOTOR_POS": [
+  9,
+  3,
+  1,
+  1
+ ],
+ "V2:CMD_SET_MOTOR_SPEED": [
+  9,
+  3,
+  1,
+  2
+ ],
+ "V2:CMD_GET_MOTOR_SPEED": [
+  9,
+  3,
+  1,
+  3
+ ],
+ "V2:CMD_SET_MOTOR_POWER_ON_DEFAULT_POS_MODE": [
+  9,
+  3,
+  1,
+  19
+ ],
+ "V2:CMD_GET_MOTOR_POWER_ON_DEFAULT_POS_MODE": [
+  9,
+  3,
+  1,
+  20
+ ],
+ "V2:CMD_SET_MOTOR_PRESET_POS_MODE": [
+  9,
+  3,
+  1,
+  21
+ ],
+ "V2:CMD_GET_MOTOR_PRESET_POS_MODE": [
+  9,
+  3,
+  1,
+  22
+ ],
+ "V2:CMD_SET_MOTOR_DEFAULT_POS": [
+  9,
+  3,
+  1,
+  23
+ ],
+ "V2:CMD_SET_MOTOR_PRESET_POS": [
+  9,
+  3,
+  1,
+  24
+ ],
+ "V2:CMD_SET_MOTOR_RELATIVE_POS": [
+  9,
+  3,
+  1,
+  25
+ ],
+ "V2:CMD_SET_MOTOR_RUNNING": [
+  9,
+  3,
+  1,
+  32
+ ],
+ "V2:CMD_SET_REMOTE_PAIRING_STA": [
+  9,
+  3,
+  4,
+  3
+ ],
+ "V2:CMD_GET_REMOTE_PAIRING_STA": [
+  9,
+  3,
+  4,
+  4
+ ],
+ "V2:CMD_SET_GIMBAL_MODE": [
+  9,
+  3,
+  1,
+  37
+ ],
+ "V2:CMD_GET_GIMBAL_MODE": [
+  9,
+  3,
+  1,
+  38
+ ],
+ "V2:CMD_SET_FOCUS_MODE": [
+  9,
+  4,
+  0,
+  1
+ ],
+ "V2:CMD_GET_FOCUS_MODE": [
+  9,
+  4,
+  0,
+  2
+ ],
+ "V2:CMD_SET_METER_MODE": [
+  9,
+  4,
+  0,
+  3
+ ],
+ "V2:CMD_GET_METER_MODE": [
+  9,
+  4,
+  0,
+  4
+ ],
+ "V2:CMD_SET_OSD_STA": [
+  9,
+  4,
+  0,
+  5
+ ],
+ "V2:CMD_GET_OSD_STA": [
+  9,
+  4,
+  0,
+  6
+ ],
+ "V2:CMD_GET_REVERSE_STA": [
+  9,
+  4,
+  0,
+  7
+ ],
+ "V2:CMD_SET_REVERSE_STA": [
+  9,
+  4,
+  0,
+  8
+ ],
+ "V2:CMD_SET_WB_LOCK_STA": [
+  9,
+  4,
+  0,
+  9
+ ],
+ "V2:CMD_GET_WB_LOCK_STA": [
+  9,
+  4,
+  0,
+  10
+ ],
+ "V2:CMD_SET_EV_LOCK_STA": [
+  9,
+  4,
+  0,
+  11
+ ],
+ "V2:CMD_GET_EV_LOCK_STA": [
+  9,
+  4,
+  0,
+  12
+ ],
+ "V2:CMD_SET_FOCUS_LOCK_STA": [
+  9,
+  4,
+  0,
+  13
+ ],
+ "V2:CMD_GET_FOCUS_LOCK_STA": [
+  9,
+  4,
+  0,
+  14
+ ],
+ "V2:CMD_GET_RIO_INFO": [
+  9,
+  4,
+  0,
+  15
+ ],
+ "V2:CMD_GET_IMAGE_SCOPE": [
+  9,
+  4,
+  0,
+  16
+ ],
+ "V2:CMD_GET_UVCARGS_STATUS": [
+  9,
+  4,
+  0,
+  17
+ ],
+ "V2:CMD_SET_HDR_STA": [
+  9,
+  4,
+  0,
+  18
+ ],
+ "V2:CMD_GET_HDR_STA": [
+  9,
+  4,
+  0,
+  19
+ ],
+ "V2:CMD_SET_LOW_LIGHT_STA": [
+  9,
+  4,
+  0,
+  53
+ ],
+ "V2:CMD_GET_LOW_LIGHT_STA": [
+  9,
+  4,
+  0,
+  54
+ ],
+ "V2:CMD_SET_MANNUAL_EV_TIME": [
+  9,
+  4,
+  0,
+  20
+ ],
+ "V2:CMD_GET_MANNUAL_EV_TIME": [
+  9,
+  4,
+  0,
+  21
+ ],
+ "V2:CMD_SET_MANNUAL_WB_INFO": [
+  9,
+  4,
+  0,
+  22
+ ],
+ "V2:CMD_GET_MANNUAL_WB_INFO": [
+  9,
+  4,
+  0,
+  23
+ ],
+ "V2:CMD_GET_UVC_SUPPORT_VIDEO_PARAM": [
+  9,
+  4,
+  0,
+  24
+ ],
+ "V2:CMD_SET_MULTI_SPECTRAL": [
+  9,
+  4,
+  0,
+  25
+ ],
+ "V2:CMD_GET_MULTI_SPECTRAL": [
+  9,
+  4,
+  0,
+  26
+ ],
+ "V2:CMD_SET_MULTI_SPECTRAL_FUNC": [
+  9,
+  4,
+  0,
+  27
+ ],
+ "V2:CMD_GET_MULTI_SPECTRAL_FUNC": [
+  9,
+  4,
+  0,
+  28
+ ],
+ "V2:CMD_SET_UVC_VIDEO_DIR": [
+  9,
+  4,
+  0,
+  29
+ ],
+ "V2:CMD_GET_UVC_VIDEO_DIR": [
+  9,
+  4,
+  0,
+  30
+ ],
+ "V2:CMD_SET_POWER_LINE_MODE": [
+  9,
+  4,
+  0,
+  33
+ ],
+ "V2:CMD_GET_POWER_LINE_MODE": [
+  9,
+  4,
+  0,
+  34
+ ],
+ "V2:CMD_SET_LUT3D_MODE": [
+  9,
+  4,
+  0,
+  39
+ ],
+ "V2:CMD_GET_LUT3D_MODE": [
+  9,
+  4,
+  0,
+  40
+ ],
+ "V2:CMD_GET_UVC_SUPPORT_ZOOM_PARAM": [
+  9,
+  4,
+  0,
+  41
+ ],
+ "V2:CMD_SET_HDMI_VIDEO_DIR": [
+  9,
+  4,
+  0,
+  42
+ ],
+ "V2:CMD_GET_HDMI_VIDEO_DIR": [
+  9,
+  4,
+  0,
+  43
+ ],
+ "V2:CMD_GET_HDMI_CONNECT_STATUS": [
+  9,
+  4,
+  0,
+  44
+ ],
+ "V2:CMD_SET_WB_FINE_TUNE": [
+  9,
+  4,
+  0,
+  49
+ ],
+ "V2:CMD_GET_WB_FINE_TUNE": [
+  9,
+  4,
+  0,
+  50
+ ],
+ "V2:CMD_SET_TARGET_TRACK": [
+  9,
+  4,
+  1,
+  0
+ ],
+ "V2:CMD_GET_TARGET_TRACK": [
+  9,
+  4,
+  1,
+  1
+ ],
+ "V2:CMD_SET_OBJECT_TRACK": [
+  9,
+  4,
+  1,
+  2
+ ],
+ "V2:CMD_GET_OBJECT_TRACK": [
+  9,
+  4,
+  1,
+  3
+ ],
+ "V2:CMD_SET_OBJECT_TRACK_REPORT": [
+  9,
+  4,
+  1,
+  4
+ ],
+ "V2:CMD_GET_OBJECT_TRACK_REPORT": [
+  9,
+  4,
+  1,
+  5
+ ],
+ "V2:CMD_SET_GESTURE_RECOG_STA": [
+  9,
+  4,
+  2,
+  0
+ ],
+ "V2:CMD_GET_GESTURE_RECOG_STA": [
+  9,
+  4,
+  2,
+  1
+ ],
+ "V2:CMD_SET_DENOISE_STA": [
+  9,
+  5,
+  0,
+  0
+ ],
+ "V2:CMD_GET_DENOISE_STA": [
+  9,
+  5,
+  0,
+  1
+ ],
+ "V2:CMD_SET_MIC_SWITCH": [
+  9,
+  5,
+  0,
+  2
+ ],
+ "V2:CMD_SET_MUSIC_MODE": [
+  9,
+  5,
+  0,
+  3
+ ],
+ "V2:CMD_GET_MUSIC_MODE": [
+  9,
+  5,
+  0,
+  4
+ ],
+ "V2:CMD_GET_MIC_CUR": [
+  9,
+  5,
+  0,
+  5
+ ],
+ "V2:CMD_SET_MIC_MUTE_STA": [
+  9,
+  5,
+  0,
+  6
+ ],
+ "V2:CMD_GET_MIC_MUTE_STA": [
+  9,
+  5,
+  0,
+  7
+ ],
+ "V2:CMD_SET_AUDIO_AGC_STA": [
+  9,
+  5,
+  0,
+  8
+ ],
+ "V2:CMD_GET_AUDIO_AGC_STA": [
+  9,
+  5,
+  0,
+  9
+ ],
+ "V2:CMD_SET_AUDIO_INPUT_GAIN": [
+  9,
+  5,
+  0,
+  10
+ ],
+ "V2:CMD_GET_AUDIO_INPUT_GAIN": [
+  9,
+  5,
+  0,
+  11
+ ],
+ "V2:CMD_SET_AUDIO_OUTPUT_VOLUME": [
+  9,
+  5,
+  1,
+  0
+ ],
+ "V2:CMD_GET_HAS_PASSWD": [
+  9,
+  6,
+  0,
+  0
+ ],
+ "V2:CMD_SET_CONFIG_PASSWD": [
+  9,
+  6,
+  0,
+  1
+ ],
+ "V2:CMD_SET_VERIFY_PASSWD": [
+  9,
+  6,
+  0,
+  2
+ ],
+ "V2:CMD_GET_WIFI_LIST": [
+  9,
+  6,
+  1,
+  0
+ ],
+ "V2:CMD_SET_CONN_WIFI": [
+  9,
+  6,
+  1,
+  1
+ ],
+ "V2:CMD_GET_CUR_WIFI_DBM": [
+  9,
+  6,
+  1,
+  2
+ ],
+ "V2:CMD_SET_DEL_CUR_WIFI": [
+  9,
+  6,
+  1,
+  3
+ ],
+ "V2:CMD_SET_DISCONN_CUR_WIFI": [
+  9,
+  6,
+  1,
+  4
+ ],
+ "V2:CMD_GET_AP_PARAM": [
+  9,
+  6,
+  1,
+  5
+ ],
+ "V2:CMD_SET_AP_PARAM": [
+  9,
+  6,
+  1,
+  6
+ ],
+ "V2:CMD_GET_AP_STA": [
+  9,
+  6,
+  1,
+  7
+ ],
+ "V2:CMD_SET_AP_STA": [
+  9,
+  6,
+  1,
+  8
+ ],
+ "V2:CMD_GET_SSID_HISTORY": [
+  9,
+  6,
+  1,
+  9
+ ],
+ "V2:CMD_GET_STA_INFO": [
+  9,
+  6,
+  1,
+  10
+ ],
+ "V2:CMD_GET_AP_INFO": [
+  9,
+  6,
+  1,
+  11
+ ],
+ "V2:CMD_SET_COUNTRY_CODE": [
+  9,
+  6,
+  1,
+  12
+ ],
+ "V2:CMD_GET_COUNTRY_CODE": [
+  9,
+  6,
+  1,
+  13
+ ],
+ "V2:CMD_SET_START_RTMP_PUSH": [
+  9,
+  6,
+  2,
+  0
+ ],
+ "V2:CMD_SET_START_RTSP_PUSH": [
+  9,
+  6,
+  2,
+  1
+ ],
+ "V2:CMD_SET_STREAM_PUSH_OFF": [
+  9,
+  6,
+  2,
+  2
+ ],
+ "V2:CMD_GET_STREAM_PUSH_STA": [
+  9,
+  6,
+  2,
+  3
+ ],
+ "V2:CMD_GET_STREAM_PUSH_URL": [
+  9,
+  6,
+  2,
+  4
+ ],
+ "V2:CMD_GET_STREAM_PUSH_INFO": [
+  9,
+  6,
+  2,
+  5
+ ],
+ "V2:CMD_SET_RTC_TIME": [
+  9,
+  8,
+  1,
+  6
+ ],
+ "V2:CMD_GET_RTC_TIME": [
+  9,
+  8,
+  1,
+  7
+ ],
+ "V2:CMD_SET_START_UPG_DEVICE": [
+  9,
+  9,
+  0,
+  0
+ ],
+ "V2:CMD_SET_START_UPG_MASTER": [
+  9,
+  9,
+  0,
+  1
+ ],
+ "V2:CMD_SET_END_UPG_MASTER": [
+  9,
+  9,
+  0,
+  4
+ ],
+ "V2:CMD_SET_END_UPG_DEVICE": [
+  9,
+  9,
+  0,
+  5
+ ],
+ "V2:CMD_GET_DEVICE_UPG_STA": [
+  9,
+  9,
+  0,
+  6
+ ],
+ "V2:CMD_GET_SD_INFO": [
+  9,
+  10,
+  0,
+  0
+ ],
+ "V2:CMD_SET_SD_FORMAT": [
+  9,
+  10,
+  0,
+  1
+ ],
+ "V2:CMD_SET_SD_RECORD_INFO": [
+  9,
+  10,
+  0,
+  2
+ ],
+ "V2:CMD_GET_SD_RECORD_INFO": [
+  9,
+  10,
+  0,
+  3
+ ],
+ "V2:CMD_SET_SD_RECORD_STA": [
+  9,
+  10,
+  0,
+  4
+ ],
+ "V2:CMD_GET_SD_RECORD_STA": [
+  9,
+  10,
+  0,
+  5
+ ],
+ "V2:CMD_GET_SD_RECORD_ERR_INFO": [
+  9,
+  10,
+  0,
+  6
+ ],
+ "V2:CMD_GET_SD_RECORD_RUN_DURATION": [
+  9,
+  10,
+  0,
+  7
+ ],
+ "V2:CMD_SET_SD_RECORD_MAX_DURATION": [
+  9,
+  10,
+  0,
+  8
+ ],
+ "V2:CMD_GET_SD_RECORD_MAX_DURATION": [
+  9,
+  10,
+  0,
+  9
+ ],
+ "V2:CMD_GET_SD_RECORD_SUPPORT_VIDEO_PARAM": [
+  9,
+  10,
+  0,
+  10
+ ]
+}

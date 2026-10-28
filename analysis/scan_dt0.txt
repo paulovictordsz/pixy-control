@@ -1,0 +1,83 @@
+GET_BATTERY_LEVEL                        (sem resposta)
+GET_AUTO_SHUTDOWN_TIME                   (sem resposta)
+GET_CHARGE_STA                           (sem resposta)
+GET_AUTO_POWER_ON                        (sem resposta)
+GET_POWER_MANAGE_MODE                    (sem resposta)
+GET_SN                                   32 36 30 34 31 30 36 30 30 33 34 38
+GET_VER                                  04 20
+GET_FUNC_STA                             (sem resposta)
+GET_DEVICE_VER                           (sem resposta)
+GET_DEVICE_ALIAS                         (sem resposta)
+GET_DEVICE_MODE                          01
+GET_PRIVACY_TRIGGER_TIME                 3c 00 00 00
+GET_LIGHT_RGB_SWITCH                     (sem resposta)
+GET_LIGHT_RGB_COLOR                      (sem resposta)
+GET_LIGHT_RGB_BRIGHTNESS                 (sem resposta)
+GET_LIGHT_MODE                           (sem resposta)
+GET_LIGHT_ADJUST_ALLOW_STA               (sem resposta)
+GET_LIGHT_LIMIT_BRIGHTNESS               (sem resposta)
+GET_LIGHT_PALETTE_COLOR                  (sem resposta)
+GET_LIGHT_COLOR_TYPE                     (sem resposta)
+GET_LIGHT_FAVORITE_COLOR                 (sem resposta)
+GET_KEY_SHORT_FUNC                       (sem resposta)
+GET_MOTOR_POS                            00 00 00 00 00 00 00 00 00
+GET_MOTOR_SPEED                          00 00 00 00 00 00 00 00 00
+GET_MOTOR_POWER_ON_DEFAULT_POS_MODE      00 00 00 00 00 00 00 00 00 00 00 00 00
+GET_MOTOR_PRESET_POS_MODE                00 00 00 00 00 00 00 00 00 00 00 00 00 00
+GET_GIMBAL_MODE                          (sem resposta)
+GET_REMOTE_PAIRING_STA                   (sem resposta)
+GET_FOCUS_MODE                           01 00 00 00 00
+GET_METER_MODE                           01 00 00 00 00
+GET_OSD_STA                              00
+GET_REVERSE_STA                          00 00
+GET_WB_LOCK_STA                          00
+GET_EV_LOCK_STA                          00
+GET_FOCUS_LOCK_STA                       00
+GET_RIO_INFO                             00
+GET_IMAGE_SCOPE                          (sem resposta)
+GET_UVCARGS_STATUS                       (sem resposta)
+GET_HDR_STA                              (sem resposta)
+GET_MANNUAL_EV_TIME                      (sem resposta)
+GET_MANNUAL_WB_INFO                      (sem resposta)
+GET_UVC_SUPPORT_VIDEO_PARAM              (sem resposta)
+GET_MULTI_SPECTRAL                       (sem resposta)
+GET_MULTI_SPECTRAL_FUNC                  (sem resposta)
+GET_UVC_VIDEO_DIR                        (sem resposta)
+GET_POWER_LINE_MODE                      (sem resposta)
+GET_LUT3D_MODE                           (sem resposta)
+GET_UVC_SUPPORT_ZOOM_PARAM               (sem resposta)
+GET_HDMI_VIDEO_DIR                       (sem resposta)
+GET_HDMI_CONNECT_STATUS                  (sem resposta)
+GET_WB_FINE_TUNE                         (sem resposta)
+GET_LOW_LIGHT_STA                        (sem resposta)
+GET_TARGET_TRACK                         01 21 00 6b 3d 88 cb b6 3d 00 00 00 00 40 1d e5 3e 81 73 1a 3f
+GET_OBJECT_TRACK                         (sem resposta)
+GET_OBJECT_TRACK_REPORT                  (sem resposta)
+GET_GESTURE_RECOG_STA                    00 01
+GET_DENOISE_STA                          (sem resposta)
+GET_MUSIC_MODE                           02
+GET_MIC_CUR                              (sem resposta)
+GET_MIC_MUTE_STA                         (sem resposta)
+GET_AUDIO_AGC_STA                        (sem resposta)
+GET_AUDIO_INPUT_GAIN                     (sem resposta)
+GET_HAS_PASSWD                           (sem resposta)
+GET_WIFI_LIST                            (sem resposta)
+GET_CUR_WIFI_DBM                         (sem resposta)
+GET_AP_PARAM                             (sem resposta)
+GET_AP_STA                               (sem resposta)
+GET_SSID_HISTORY                         (sem resposta)
+GET_STA_INFO                             (sem resposta)
+GET_AP_INFO                              (sem resposta)
+GET_COUNTRY_CODE                         (sem resposta)
+GET_STREAM_PUSH_STA                      (sem resposta)
+GET_STREAM_PUSH_URL                      (sem resposta)
+GET_STREAM_PUSH_INFO                     (sem resposta)
+GET_RTC_TIME                             (sem resposta)
+GET_DEVICE_UPG_STA                       (sem resposta)
+GET_SD_INFO                              (sem resposta)
+GET_SD_RECORD_INFO                       (sem resposta)
+GET_SD_RECORD_STA                        (sem resposta)
+GET_SD_RECORD_ERR_INFO                   (sem resposta)
+GET_SD_RECORD_RUN_DURATION               (sem resposta)
+GET_SD_RECORD_MAX_DURATION               (sem resposta)
+GET_SD_RECORD_SUPPORT_VIDEO_PARAM        (sem resposta)

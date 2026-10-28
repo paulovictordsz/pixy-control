@@ -1,0 +1,13 @@
+# build
+.build/
+build/
+dist/
+PixyBar/Resources/AppIcon.iconset/
+tools/camstream
+tools/makeicons
+# python
+__pycache__/
+*.pyc
+# macOS
+.DS_Store
+PixyBar/Resources/AppIcon-1024.png
