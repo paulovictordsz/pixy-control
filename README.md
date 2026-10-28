@@ -3,6 +3,8 @@
 **Controle local da webcam EMEET PIXY no macOS, sem o EMEET STUDIO.**
 App de barra de menu leve (Swift, 1 binário, abre em menos de um segundo) + protocolo HID documentado + CLI em Python.
 
+<p align="center"><img src="docs/painel.png" width="380" alt="Painel do PixyBar na barra de menu do macOS"></p>
+
 > *English:* PixyBar is a tiny macOS menu bar app that controls the EMEET PIXY gimbal webcam (pan/tilt, presets, AI tracking, privacy mode, gestures, flip) over its vendor HID interface, reverse engineered from EMEET STUDIO 2.0.4. The protocol is documented in [PROTOCOLO.md](PROTOCOLO.md) (Portuguese) and the command table is in [`pixy/commands.json`](pixy/commands.json). Not affiliated with EMEET.
 
 ---
