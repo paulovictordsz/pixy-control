@@ -220,12 +220,22 @@ final class PixyTransport {
         _ = try await send(.setPrivacyTrigger, withUnsafeBytes(of: s.littleEndian) { Array($0) })
     }
 
-    func trackingMode() async throws -> UInt8 {
-        let r = try await send(.getTargetTrack); return r.first ?? 0
+    /// Estado real do seguir: a IA só roda com device mode 1. GET_TARGET_TRACK pode dizer 1
+    /// com a câmera em modo manual (após ligar, por exemplo) sem nada acontecer.
+    func isTracking() async throws -> Bool {
+        try await deviceMode() == 1
     }
 
-    func setTracking(_ mode: UInt8) async throws {
-        _ = try await send(.setTargetTrack, [mode] + [UInt8](repeating: 0, count: 12))
+    /// Liga: device mode 1 (IA) + SET_TARGET_TRACK 1. Desliga: SET_TARGET_TRACK 0 + device mode 3 (manual).
+    /// Recusado pelo firmware enquanto a câmera está em privacidade (modo 2).
+    func setTracking(_ on: Bool) async throws {
+        if on {
+            try await setDeviceMode(1)
+            _ = try await send(.setTargetTrack, [1] + [UInt8](repeating: 0, count: 12))
+        } else {
+            _ = try await send(.setTargetTrack, [0] + [UInt8](repeating: 0, count: 12))
+            try await setDeviceMode(3)
+        }
     }
 }
 

@@ -12,6 +12,7 @@
   python3 pixy_cli.py pos pan|tilt [graus]    lê ou posiciona o motor (absoluto)
   python3 pixy_cli.py gesture N [on|off]      reconhecimento de gesto tipo N (0-3 na PIXY)
   python3 pixy_cli.py flip h|v [on|off]       espelhamento horizontal/vertical
+  python3 pixy_cli.py follow [on|off]         seguir (device mode 1 + target track)
   python3 pixy_cli.py preset N                vai para a posição preset N
 
 Flags: -v (bytes na tela), --dev N (device type), --eu-sei-o-que-estou-fazendo
@@ -147,6 +148,9 @@ def main(argv):
             if len(args) > 1:
                 api.set_reverse(t, args[1] == "on")
             r = api.get_reverse(t); print(f"flip {r[0]}: {'ligado' if r[1] else 'desligado'}"); return 0
+        if cmd == "follow":
+            if args: api.set_tracking(args[0] == "on")
+            print("seguir:", "ligado" if api.is_tracking() else "desligado"); return 0
         if cmd == "preset":
             print("preset ->", api.set_preset_pos(int(args[0]))); return 0
 

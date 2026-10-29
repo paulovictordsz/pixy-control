@@ -14,7 +14,7 @@ enum SelfTest {
             let p = try await t.motorPosition(.pan), ti = try await t.motorPosition(.tilt)
             print(String(format: "pan alvo %.2f atual %.2f | tilt alvo %.2f atual %.2f", p.target, p.current, ti.target, ti.current))
             print("gestos  \(try await (0..<4).asyncMap { try await t.gesture(UInt8($0)) })")
-            print("flip H \(try await t.flip(1)) V \(try await t.flip(2)) | tracking modo \(try await t.trackingMode()) | device mode \(try await t.deviceMode())")
+            print("flip H \(try await t.flip(1)) V \(try await t.flip(2)) | seguindo \(try await t.isTracking()) | device mode \(try await t.deviceMode())")
             if CommandLine.arguments.contains("--move") {
                 print("movendo pan para \(p.target + 10) e voltando…")
                 try await t.setMotorPosition(.pan, p.target + 10)

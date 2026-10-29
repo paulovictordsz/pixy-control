@@ -63,7 +63,7 @@ Os 161 cabeçalhos extraídos estão em `pixy/commands.json` (bytes 0-3). Resumo
 | `GET_VER` | – | `u16 LE` versão |
 | `GET_SN` | – | string ASCII (12 chars na PIXY) |
 | `GET_DEVICE_MODE` | – | `u8` (PIXY devolve 1) |
-| `SET_DEVICE_MODE` | `u8` | eco/status. **Semântica na PIXY:** 1 = tracking (SET é recusado com `0x40`; entra via `SET_TARGET_TRACK` 1), 2 = privacidade (tilt vai a -90°), 3 = manual (ao voltar de 2 o tilt vai a 0°) |
+| `SET_DEVICE_MODE` | `u8` | eco/status. **Semântica na PIXY:** 0 = manual, estado após ligar a câmera; 1 = IA/tracking (aceito a partir de 0 ou 3, recusado com `0x40` a partir de 2); 2 = privacidade (tilt vai a -90°); 3 = manual (ao voltar de 2 o tilt vai a 0°). **O seguir só funciona em modo 1**: `SET_TARGET_TRACK 1` em modo 0/3 é aceito e lido de volta, mas a IA não roda (caixa do alvo sempre zero) |
 | `GET_MOTOR_POS` (dt 3) | `u8 motor` | `u8 motor, f32, f32` (motor 1 = pan, motor 2 = tilt, graus; 1º float = alvo, 2º = posição atual, que converge em ~2 s; motor 0 devolve zeros) |
 | `SET_MOTOR_POS` (dt 3) | `u8 motor, f32 pos` | código |
 | `SET_MOTOR_RELATIVE_POS` (dt 3) | `u8 motor, f32 delta` | eco do motor. Na PIXY o deslocamento final não bate com o delta (overshoot e reacomodação): prefira `SET_MOTOR_POS` |
@@ -101,7 +101,7 @@ Mudos (em qualquer device type): HDR, low light, LUT3D, direção do vídeo, ali
 - `SET_MOTOR_RELATIVE_POS`: move, mas sem precisão
 - `SET_GESTURE_RECOG_STA` tipo 3 off/on, com leitura confirmando; tipo 4 não existe na PIXY (set ignorado)
 - `SET_REVERSE_STA` flip horizontal (tipo 1) on/off, com leitura confirmando
-- `SET_TARGET_TRACK` modo 1 liga o tracking (GET devolve 1), modo 0 desliga; a caixa do alvo só é preenchida com vídeo rodando
+- Seguir de verdade = `SET_DEVICE_MODE 1` + `SET_TARGET_TRACK 1`: com vídeo aberto a caixa do alvo aparece em 2 s. Desligar = `SET_TARGET_TRACK 0` + `SET_DEVICE_MODE 3`. Descoberto depois de um reboot do Mac: a câmera religou em modo 0 e o tracking parou de responder
 - `SET_DEVICE_MODE` 2 = privacidade (câmera aponta para baixo), 3 = volta ao normal
 - Limites aceitos pelo firmware: pan ±150°, tilt ±90° (valores maiores são recortados)
 - A PIXY entra sozinha no modo 2 (privacidade, tilt -90°) quando passa `PRIVACY_TRIGGER_TIME` segundos sem comandos HID (padrão 60 s); acorda (modo 3, tilt 0°) quando algum app abre o stream UVC ou com `SET_DEVICE_MODE 3`

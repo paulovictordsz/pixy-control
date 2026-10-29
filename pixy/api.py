@@ -75,6 +75,19 @@ class PixyApi:
     def get_target_track(self):
         return self.cam.get("GET_TARGET_TRACK")
 
+    def is_tracking(self) -> bool:
+        """O seguir só roda com device mode 1 (IA)."""
+        return _u8(self.cam.get("GET_DEVICE_MODE")) == 1
+
+    def set_tracking(self, on: bool):
+        """Liga: device mode 1 + SET_TARGET_TRACK 1. Desliga: SET_TARGET_TRACK 0 + device mode 3.
+        Recusado pelo firmware em modo privacidade (2)."""
+        if on:
+            self.cam.set("SET_DEVICE_MODE", b"\x01")
+            return self.cam.set("SET_TARGET_TRACK", b"\x01" + bytes(12))
+        self.cam.set("SET_TARGET_TRACK", b"\x00" + bytes(12))
+        return self.cam.set("SET_DEVICE_MODE", b"\x03")
+
     # ---- gimbal / motor (device type 3) ---------------------------------
     def get_gimbal_mode(self):
         return _u8(self.cam.get("GET_GIMBAL_MODE"))

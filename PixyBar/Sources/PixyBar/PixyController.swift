@@ -121,7 +121,9 @@ final class PixyController: ObservableObject {
     /// Chamado uma vez quando outro app abre o vídeo: sincroniza o estado e reaplica o modo seguir.
     private func onCameraWoke() async {
         guard connected else { return }
-        privacy = ((try? await transport.deviceMode()) ?? 0) == 2
+        let mode = (try? await transport.deviceMode()) ?? 0
+        privacy = mode == 2
+        tracking = mode == 1
         await applyDesiredTracking()
         await readPositions()
     }
@@ -159,8 +161,9 @@ final class PixyController: ObservableObject {
             for i in 0..<4 { gestures[i] = (try? await transport.gesture(UInt8(i))) ?? false }
             flipH = (try? await transport.flip(1)) ?? false
             flipV = (try? await transport.flip(2)) ?? false
-            tracking = ((try? await transport.trackingMode()) ?? 0) != 0
-            privacy = ((try? await transport.deviceMode()) ?? 0) == 2
+            let mode = (try? await transport.deviceMode()) ?? 0
+            tracking = mode == 1
+            privacy = mode == 2
             if let t = try? await transport.privacyTriggerSeconds() {
                 // Sincroniza com o que está no firmware (pode ter sido mudado pelo EMEET STUDIO).
                 autoPrivacy = t != Self.autoPrivacyOff
@@ -271,15 +274,15 @@ final class PixyController: ObservableObject {
         tracking = on
         trackingDesired = on
         UserDefaults.standard.set(on, forKey: "pixybar.tracking")
-        await run("Seguir \(on ? "ligado" : "desligado")") { try await transport.setTracking(on ? 1 : 0) }
+        await run("Seguir \(on ? "ligado" : "desligado")") { try await transport.setTracking(on) }
     }
 
     /// Garante que a câmera está no modo seguir escolhido pelo usuário (se o firmware perdeu o estado).
     func applyDesiredTracking() async {
         guard connected, !privacy, reapplyTrackingOnWake else { return }
-        let actual = ((try? await transport.trackingMode()) ?? 0) != 0
+        let actual = (try? await transport.isTracking()) ?? false
         if actual != trackingDesired {
-            await run(trackingDesired ? "Seguir religado" : "Seguir desligado") { try await transport.setTracking(trackingDesired ? 1 : 0) }
+            await run(trackingDesired ? "Seguir religado" : "Seguir desligado") { try await transport.setTracking(trackingDesired) }
             tracking = trackingDesired
         }
     }
