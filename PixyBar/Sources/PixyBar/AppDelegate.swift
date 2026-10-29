@@ -26,6 +26,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private var bag = Set<AnyCancellable>()
 
+    /// Reabrir o app (Finder, Dock, login) abre o painel em vez de qualquer janela.
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        if let button = statusItem.button, !panel.isVisible { panel.show(relativeTo: button) }
+        return false
+    }
+
     /// Ícone template da barra de menu (Resources/MenuIcon*.png), com fallback para SF Symbols.
     static func menuIcon(connected: Bool) -> NSImage? {
         let name = connected ? "MenuIcon" : "MenuIconOff"
